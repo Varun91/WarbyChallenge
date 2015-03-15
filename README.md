@@ -2,7 +2,7 @@
 Solution to Warby Parker coding challenge completed Summer of 2014. Passed all but one of a grueling series of tests and was recognized as one of the top 5 out of hundreds of submissions. Challenge description below:
 
 
-#Problem Description
+##Problem Description
 
 You've been given two lists: the first is a list of patterns, the second is a list of slash-separated paths. Your job is to print, for each path, the pattern which best matches that path. ("Best" is defined more rigorously below, under "Output Format".)
 
