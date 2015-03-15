@@ -10,11 +10,11 @@ A pattern is a comma-separated sequence of non-empty strings. For a pattern to m
 
 Patterns can also contain a special string consisting of a single asterisk, which is a wildcard and will match any string in the path. For example, the pattern A,*,B,*,C consists of five fields: three strings and two wildcards. It will successfully match the paths A/foo/B/bar/C and A/123/B/456/C, but not A/B/C, A/foo/bar/B/baz/C, or foo/B/bar/C.
 
-Input Format
+###Input Format
 
 The first line contains an integer, N, specifying the number of patterns. The following N lines contain one pattern per line. Each pattern is unique. The next line contains a second integer, M, specifying the number of paths. The following M lines contain one path per line.
 
-Output Format
+###Output Format
 
 For each path encountered in the input, print the best-matching pattern. The best-matching pattern is the one which matches the path using the fewest wildcards.
 
@@ -24,38 +24,42 @@ For example, given the patterns a,*,c,* and a,*,*,d, and the path /a/b/c/d, the 
 
 If no pattern matches the path, print NO MATCH.
 
-Submission Requirements
-
-You should submit a working program, runnable from a command line, that reads from standard input and prints to standard output. In Unix parlance, it should be runnable like this:
-
-    ./your_program.ext < input_file > output_file
-
-Of course, the actual command line may vary depending on the language you choose; your program file doesn't need to executable on its own, but it should read input directly from stdin.
-
-You may use any programming language in your implementation, though we encourage you to choose one used in the Computer Language Benchmarks Game.
-
-Extra credit: What's the algorithmic complexity of your program? In other words, how does its running time change as the number of patterns or number of paths increases? Would your program complete quickly even when given tens of thousands of patterns and paths? Is there a faster solution? Can you trade memory for reduced execution time? (Hint: although a correct program is sufficient, there is extra credit for an algorithm that's better than sub-quadratic.)
-
-Example Input
+###Example Input
 
 6
-*,b,*
-a,*,*
-*,*,c
+
+\*,b,\*
+
+a,\*,\*
+
+\*,\*,c
+
 foo,bar,baz
-w,x,*,*
-*,x,y,z
+
+w,x,\*,\*
+
+\*,x,y,z
+
 5
+
 /w/x/y/z/
+
 a/b/c
+
 foo/
+
 foo/bar/
+
 foo/bar/baz/
 
-Example Output
+###Example Output
 
-*,x,y,z
-a,*,*
+\*,x,y,z
+
+a,\*,\*
+
 NO MATCH
+
 NO MATCH
+
 foo,bar,baz
